@@ -1,50 +1,18 @@
-# React + TypeScript + Vite
+# Twinsies FYP Digital Twin Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Purpose of the Project
+The Twinsies project aims to create a digital twin system that leverages generative AI to provide recommendations and assistance to students, helping them improve their academic and personal development. This system models student profiles and behaviors to simulate potential outcomes and provide insights.
 
-Currently, two official plugins are available:
+## Technology Stack
+- **Frontend Framework**: React with Vite
+- **Language**: TypeScript
+- **UI Library**: Shadcn
+- **Deployment**: Docker Compose on SMU Servers
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Configuration
+The application requires specific api keys and secrets that are not publicly shareable. 
 
-## Expanding the ESLint configuration
+## Additional Information
+This demo project repository serves primarily as a platform to view code and understand the structure and setup of the application. It is not intended for production use or full functionality without proper configuration.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
